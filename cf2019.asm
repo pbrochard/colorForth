@@ -2305,23 +2305,23 @@ plus_at:    ; ( y x -- )
     ret
 
 
-storew_:    ; ( w a -- ) \  ; : !w a! $00028966 3, drop ; 
+storew_:    ; ( w a -- ) \  ; : !w a! $00028966 3, drop ;
     db 0x8B, 0xD0           ; mov edx,eax       a! $D08B 2,   ( ?lit not true )
     db 0x66, 0x89, 0x02     ; mov [edx],ax      $00028966 3,
-    _DROP_                  ; lodsd        
-    ret                     ; ret          
+    _DROP_                  ; lodsd
+    ret                     ; ret
 
 
 storeu_:    ; ( u a -- ) \  ; : !l a! $0289 2, drop ; forth
     db 0x8B, 0xD0           ; mov edx,eax       a! $D08B 2,   ( ?lit not true )
     db 0x89, 0x02           ; mov [edx],eax     $0289 2,
-    _DROP_                  ; lodsd         
-    ret                     ; ret           
+    _DROP_                  ; lodsd
+    ret                     ; ret
 
 uplus_: ; ( u u -- u )   \ : u+ ?lit if $0681 2, , ; then $00044601 3, drop ;
     db 0x01, 0x46, 0x04     ; add [esi+0x4],eax   $00044601 3,   ( ?lit not true )
-    _DROP_                  ; lodsd        
-    ret                     ; ret          
+    _DROP_                  ; lodsd
+    ret                     ; ret
 
 %if 1
 ; the various pieces of code used by a! and +! in colorForth blocks 22 and 24
@@ -2899,7 +2899,7 @@ qwerty_key_map_table:
     db 0x1C, 0x81, 0x0E, 0x82, 0x01, 0x83, 0x3B, 0x84, 0x29, 0x30
     ; test only
 ; times 0x40 db 0x00,
-    
+
 get_qwerty_key_:           ; get a qwerty key character
     _DUP_
 .back:
@@ -3184,10 +3184,10 @@ accept2:
     jmp dword [ x_qwerty ]          ; jump to the address in x_qwerty if it is non-zero
 .forward:
     call get_key_                    ; calls pause_ while waiting for a character
-    cmp al, 0x04                    ; 
+    cmp al, 0x04                    ;
     jns .forward2
     mov edx, [ shiftAction ]
-    jmp dword [ edx + _TOS_ * 4 ]   ; alpha0 jump table element 
+    jmp dword [ edx + _TOS_ * 4 ]   ; alpha0 jump table element
 .forward2:
     add dword [ shiftAction ], byte +0x14
     call word_
@@ -3554,7 +3554,7 @@ redWord:     ; display a red word
     jmp type_
 
 greenWord:     ; display a green word
-    call setGreen  
+    call setGreen
     jmp type_
 
 cyanWord:     ; display a cyan word
