@@ -2688,7 +2688,7 @@ key_map_table:   ; map 8042 scan type 1 keycode to colorForth character values
     db  6,  7,  0,  0,  0,  0, 20, 21 ; 0x18 - 0x1F
     db 22, 23,  0,  0,  8,  9, 10, 11 ; 0x20 - 0x27
     db  0,  0,  0,  0, 24, 25, 26, 27 ; 0x28 - 0x2F
-    db  0,  1, 12, 13, 14, 15,  0,  0 ; 0x30 - 0x37 N
+    db  3,  1, 12, 13, 14, 15,  0,  0 ; 0x30 - 0x37 B N
     db  3,  2                         ; 0x38 - 0x39 alt space
 
 ; ToDo: add a timeout to the loop
