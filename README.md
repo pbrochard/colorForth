@@ -8,6 +8,9 @@ Purpose of this fork
 This fork aims to run colorForth under qemu (limbo) on Android.  
 For now, the only change is to use the B key as an Alt Gr alternative.
 
+![colorForth](https://raw.githubusercontent.com/pbrochard/colorForth/master/screenshots/colorForth_Android_Qemu_Limbo.png "colorForth on Android - Qemu")
+![colorForth](https://raw.githubusercontent.com/pbrochard/colorForth/master/screenshots/colorForth_Android_Qemu_Limbo_Details.png "colorForth on Android - Qemu")
+
 Running
 -------
 
