@@ -2,6 +2,12 @@
 Native colorForth for 32-bit PCs, at least compilable on Linux and runnable on both Bochs and Qemu.
 It is adapted from http://sourceforge.net/projects/colorforth.
 
+Purpose of this fork
+--------------------
+
+This fork aims to run colorForth under qemu (limbo) on Android.  
+For now, the only change is to use the B key as an Alt Gr alternative.
+
 Running
 -------
 
